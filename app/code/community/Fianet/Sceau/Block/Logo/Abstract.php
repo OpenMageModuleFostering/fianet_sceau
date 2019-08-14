@@ -15,10 +15,5 @@ abstract class Fianet_Sceau_Block_Logo_Abstract extends Mage_Core_Block_Template
         }
         return false;
     }
-  
-    public function getLoginSceau()
-    {
-       return Mage::getStoreConfig('sceau/sceauconfg/login');
-    }
 
 }

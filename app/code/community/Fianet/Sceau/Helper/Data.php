@@ -146,6 +146,10 @@ class Fianet_Sceau_Helper_Data extends Mage_Core_Helper_Abstract {
         }
         return Mage::getStoreConfig('sceau/sceauconfg/siteid');
     }
+	
+	static function getLogin() {
+        return Mage::getStoreConfig('sceau/sceauconfg/login');
+    }
 
     static function activateWidgetComments() {
         return Mage::getStoreConfig('sceau/widgetconf/commentaires');
