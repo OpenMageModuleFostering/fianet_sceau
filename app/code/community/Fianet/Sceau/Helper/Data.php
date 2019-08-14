@@ -8,7 +8,7 @@ class Fianet_Sceau_Helper_Data extends Mage_Core_Helper_Abstract {
     static function Generate_Sceau_xml(Mage_Sales_Model_Order $order) {
         //récupération des informations
         $email = $order->customer_email;
-        $timestamp = $order->created_at;
+        $timestamp = Mage::getModel('core/date')->date(null,strtotime($order->created_at));
         $refid = $order->increment_id;
         $privatekey = Mage::getStoreConfig('sceau/sceauconfg/private_key', $order->getStoreId());
         $crypt = md5($privatekey . "_" . $refid . "+" . $timestamp . "=" . $email);
@@ -17,8 +17,8 @@ class Fianet_Sceau_Helper_Data extends Mage_Core_Helper_Abstract {
 		//Si l'IP de l'internaute n'est pas présente dans Magento (en cas de création de commande depuis le BO) alors on récupère l'IP de la boutique
 		$ip = (!$order->getRemoteIp()) ? $_SERVER['REMOTE_ADDR'] : $order->getRemoteIp();
         //Zend_Debug::dump($order);die;
-
-        return("<?xml version='1.0' encoding='UTF-8' ?><control><utilisateur><nom titre='$order->customer_prefix'><![CDATA[$order->customer_lastname]]></nom><prenom><![CDATA[$order->customer_firstname]]></prenom><email><![CDATA[$email]]></email></utilisateur><infocommande><siteid><![CDATA[$siteid]]></siteid><refid><![CDATA[$refid]]></refid><montant devise='$order->base_currency_code'><![CDATA[$order->base_grand_total]]></montant><ip timestamp='$timestamp'><![CDATA[$ip]]></ip></infocommande><crypt><![CDATA[$crypt]]></crypt></control>");
+		
+        return("<?xml version='1.0' encoding='UTF-8' ?><control><utilisateur><nom titre='$order->customer_gender'><![CDATA[$order->customer_lastname]]></nom><prenom><![CDATA[$order->customer_firstname]]></prenom><email><![CDATA[$email]]></email></utilisateur><infocommande><siteid><![CDATA[$siteid]]></siteid><refid><![CDATA[$refid]]></refid><montant devise='$order->base_currency_code'><![CDATA[$order->base_grand_total]]></montant><ip timestamp='$timestamp'><![CDATA[$ip]]></ip></infocommande><crypt><![CDATA[$crypt]]></crypt></control>");
     }
 
     static public function clean_xml($xml) {
