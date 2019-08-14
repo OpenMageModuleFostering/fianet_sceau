@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout>
+    <default>
+        <reference name="left">
+            <block type="fianet_sceau/widget_left" name="sceau.left" template="fianet_sceau/page/html/sceau.phtml" before="-" />
+        </reference>
+        <reference name="left">
+            <block type="fianet_sceau/logo_left" name="logo.left" template="fianet_sceau/page/html/logo.phtml"/>
+            </reference>
+        <reference name="right">
+            <block type="fianet_sceau/widget_right" name="sceau.right" template="fianet_sceau/page/html/sceau.phtml" before="-" />
+        </reference>
+        <reference name="right">
+            <block type="fianet_sceau/logo_right" name="logo.right" template="fianet_sceau/page/html/logo.phtml" />
+            </reference>
+        <reference name="footer">
+            <block type="fianet_sceau/widget_footer" name="sceau.footer" template="fianet_sceau/page/html/sceau.phtml"  />
+        </reference>
+       <reference name="footer"> 
+            <block type="fianet_sceau/logo_footer" name="logo.footer" template="fianet_sceau/page/html/logo.phtml"/>
+            </reference>
+    </default>
+</layout>

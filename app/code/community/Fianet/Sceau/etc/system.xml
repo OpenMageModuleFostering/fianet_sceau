@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <sceau translate="label">
+            <label>Sceau de confiance</label>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <sceauconfg translate="label">
+                    <label>General configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <comment><![CDATA[<b><a href="https://www.fia-net.com/__extranet/" target="_blank" style="color: #EA7601;">Accès Extranet FIA-NET</a></b>]]></comment>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!-- New fields go here -->
+                        
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <mode translate="label">
+                            <label>Mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>fianet_sceau_model_source_mode</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mode>
+                        <siteid translate="label comment">
+                            <label>SiteID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Correspond à votre identifant marchand FIA-NET</comment>
+                        </siteid>
+                        <login translate="label">
+                            <label>Login Sceau</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </login>
+                        <private_key translate="label comment">
+                            <label>private_key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </private_key>
+                        <password translate="label comment">
+                            <label>password</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </password>
+                            <orderstatuses translate="label comment">
+                                <label>Envoi automatique des commandes</label>
+                                <frontend_type>multiselect</frontend_type>
+                                <source_model>fianet_sceau_model_source_status</source_model>
+                                <sort_order>6</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                                <comment>Toute commande atteignant l'un des status définis fera l'objet d'un envoi de questionnaire</comment>
+                            </orderstatuses>
+                        </fields>
+                    </sceauconfg>
+                    <widgetconf translate="label">
+                        <label>Widget configuration</label>
+                        <frontend_type>text</frontend_type>
+                        <sort_order>2</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <fields>  
+                            <left_position translate="label">
+                                <label>left position</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>1</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </left_position>
+                            <right_position translate="label">
+                                <label>right position</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>2</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </right_position>
+                            <footer_position translate="label">
+                                <label>footer position</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>3</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </footer_position>
+                            
+                            <widgettransparent translate="label">
+                                <label>widgettransparent</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>4</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </widgettransparent>
+                            <commentaires translate="label">
+                                <label>Activer les commentaires</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>5</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </commentaires>
+                        </fields>
+                    </widgetconf>
+                    <logoconf translate="label">
+                        <label>Logo configuration</label>
+                        <frontend_type>text</frontend_type>
+                        <sort_order>2</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <fields>  
+                            <logo_left_position translate="label">
+                                <label>logo left position</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>1</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </logo_left_position>
+                            <logo_right_position translate="label">
+                                <label>logo right position</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>2</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </logo_right_position>
+                            <logo_footer_position translate="label">
+                                <label>logo footer position</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>3</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </logo_footer_position>
+                        </fields>
+                    </logoconf>
+                    
+                    <sceaulinks translate="label">
+                        <label>links</label>
+                        <frontend_type>text</frontend_type>
+                        <sort_order>3</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <fields>
+                            <fianet_url translate="label comment">
+                                <label>fianet_url</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>1</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </fianet_url>
+                            <prod_send_url translate="label comment">
+                                <label>prod_send_url</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>3</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </prod_send_url>
+                            <test_send_url translate="label comment">
+                                <label>test_send_url</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>2</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </test_send_url>
+                        </fields>
+                    </sceaulinks>
+                    
+                </groups>
+            </sceau>
+        </sections>
+    </config>

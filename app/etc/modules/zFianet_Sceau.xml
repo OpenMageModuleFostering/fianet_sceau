@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Fianet_Sceau>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Fianet_Sceau>
+    </modules>
+</config>

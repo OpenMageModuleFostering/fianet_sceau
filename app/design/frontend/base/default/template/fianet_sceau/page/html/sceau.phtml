@@ -1,0 +1,12 @@
+<?php if ($this->canDisplay()){
+if (Fianet_Sceau_Helper_Data::activateWidgetComments()){
+     echo "<center><script type='text/javascript' src='http://static.fia-net.com/widgetscomm/".Fianet_Sceau_Helper_Data::getWidgetTransparent()."/".Fianet_Sceau_Helper_Data::getSiteId().".js'></script></center>"; 
+     }  
+else
+{
+    echo "<div id='widget'>
+    <a target='_blank' href='http://www.fia-net.com/annuaire/". Fianet_Sceau_Helper_Data::getSiteId()."'><img height='70' border='0' width='160' title='Voir les avis et commentaires sur le site FIA-NET.com' alt='Evaluation FIA-NET' src='http://static.fia-net.com/widgets/".Fianet_Sceau_Helper_Data::getWidgetTransparent()."/". Fianet_Sceau_Helper_Data::getSiteId().".png'> </a>
+    <script type='text/javascript'> xt_imgpub = new Image(); xtdmedpub = new Date(); xt_imgpub.src = '&type=ad&hl=' + xtdmedpub.getHours() + 'x' + xtdmedpub.getMinutes() + 'x' + xtdmedpub.getSeconds(); </script>
+    <br><br></div>";
+    }
+}
